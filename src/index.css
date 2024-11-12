@@ -1,0 +1,13 @@
+.WhatWeDo {
+    margin-top: 650px;
+}
+.WhatWeDo_image {
+    height: 400px;
+    width: 100%;
+    object-fit: cover
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
