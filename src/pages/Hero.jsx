@@ -66,7 +66,7 @@ const HeroSection = () => {
       className="relative min-h-screen bg-cover bg-no-repeat bg-right"
       style={{
         backgroundImage:
-          "url('https://images.pexels.com/photos/1463917/pexels-photo-1463917.jpeg?auto=compress&cs=tinysrgb&w=600')",
+          "url('https://images.pexels.com/photos/236709/pexels-photo-236709.jpeg?auto=compress&cs=tinysrgb&w=600')",
       }}
     >
       <div className="absolute inset-0 bg-black opacity-40"></div>

@@ -126,6 +126,38 @@ export default function Careers() {
         ],
       },
     },
+    {
+      question: "Marketing Manager",
+      answer:
+        "We're seeking a dynamic Marketing Manager to lead and execute strategic marketing initiatives. The ideal candidate will have experience in developing and implementing marketing strategies, managing campaigns, and driving brand awareness. Strong leadership, communication, and analytical skills are essential to effectively collaborate with cross-functional teams and deliver measurable results.",
+      details: {
+        whatWeOffer: [
+          "Full-time virtual assistant career, offering the flexibility to work remotely.",
+          "$75,000 to $85,000 per year",
+          "401(k)",
+          "Health insurance",
+          "We will provide professional training to all staff members",
+          "* We provide Work tools such as a laptop and other necessary equipment"
+          // More offers...
+        ],
+        qualitiesWeValue: [
+          "Openness to learn and be coached.",
+          "Outgoing, friendly, positive, and approachable personality.",
+          // More qualities...
+        ],
+        yourQualifications: [
+          "Basic computer literacy is essential.",
+          // More qualifications...
+        ],
+        yourJobResponsibilities: [
+          "Own the overall success of assigned campaigns with the aim of delivering above & beyond on behalf of our clients.",
+          "Build client materials including but not limited to talent slides, strategy decks and campaign reports.",
+          "Manage the day-to-day workload across assigned campaigns, including delegation of tasks to Coordinator(s) where needed and ensuring team alignment.",
+          " Performing regular backups to ensure data preservation ",
+          // More responsibilities...
+        ],
+      },
+    },
 
     // Add details for the other job entries as needed
   ];
