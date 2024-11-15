@@ -6,6 +6,7 @@ import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Project from './pages/Projects';
 import Service from './pages/Service';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route element={<Contact/>}  path="/contact"/>
       <Route element={<Project/>}  path="/project"/>
       <Route element={<Service/>}  path="/service"/>
+      <Route element={<NotFound />} path="*" />
     </Routes>
   )
 }
