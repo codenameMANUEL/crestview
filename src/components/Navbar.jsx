@@ -15,7 +15,9 @@ export default function NavBar() {
     <nav className="relative bg-white shadow-sm w-full font-space-grotesk">
       <div className="flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8 md:hidden">
         <div className="flex justify-center">
-          <img alt="Logo" src={Logo} className="h-10 w-auto" />
+          <Link to="/">
+            <img alt="Logo" src={Logo} className="h-10 w-auto cursor-pointer" />
+          </Link>
         </div>
         <div className="flex justify-start">
           <AlignLeft
@@ -47,7 +49,9 @@ export default function NavBar() {
           <ul className="space-y-7">
             {links.map((link, index) => (
               <li key={index} className="text-gray-800 hover:text-gray-600">
-                <Link to={link === "HOME" ? "/" : `/${link.toLowerCase()}`}>{link}</Link>
+                <Link to={link === "HOME" ? "/" : `/${link.toLowerCase()}`}>
+                  {link}
+                </Link>
               </li>
             ))}
           </ul>
@@ -56,7 +60,9 @@ export default function NavBar() {
 
       <div className="hidden md:flex lg:hidden items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
         <div className="flex  justify-center">
-          <img alt="Logo" src={Logo} className="h-12 w-auto" />
+          <Link to="/">
+            <img alt="Logo" src={Logo} className="h-12 w-auto cursor-pointer" />
+          </Link>
         </div>
         <div className="flex justify-start">
           <AlignLeft
@@ -87,49 +93,24 @@ export default function NavBar() {
         <div className="p-4 px-14">
           <ul className="space-y-4">
             {links.map((link, index) => (
-              <li key={index} className="text-gray-800 hover:text-gray-600 pt-5">
-                <Link to={link === "HOME" ? "/" : `/${link.toLowerCase()}`}>{link}</Link>
+              <li
+                key={index}
+                className="text-gray-800 hover:text-gray-600 pt-5"
+              >
+                <Link to={link === "HOME" ? "/" : `/${link.toLowerCase()}`}>
+                  {link}
+                </Link>
               </li>
             ))}
           </ul>
-          {/* <ul className="space-y-4">
-            <li>
-              <a href="#" className="text-gray-800">
-                HOME
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-800">
-                ABOUT
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-800">
-                SERVICES
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-800">
-                PROJECT
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-800">
-                CAREER
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-800">
-                CONTACT
-              </a>
-            </li>
-          </ul> */}
         </div>
       </div>
 
       <div className="hidden lg:flex items-center justify-between h-24 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-1 justify-start">
-          <img alt="Logo" src={Logo} className="h-12 w-auto" />
+          <Link>
+          <img alt="Logo" src={Logo} className="h-12 w-auto cursor-pointer" />
+          </Link>
         </div>
         <div className="flex flex-1 justify-center space-x-10">
           <Link to="/" className="text-stone-800">
