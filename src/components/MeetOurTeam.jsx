@@ -42,7 +42,7 @@ export default function MeetOurTeam() {
             alt="Profile"
           />
           <div className="p-4">
-            <p className="text-xl font-semibold text-gray-800">Theresa Wilkins</p>
+            <p className="text-xl font-semibold text-gray-800">Rose Wilkins</p>
             <p className="text-sm text-gray-600">HR Manager</p>
           </div>
         </div>

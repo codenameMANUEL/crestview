@@ -108,7 +108,7 @@ export default function NavBar() {
 
       <div className="hidden lg:flex items-center justify-between h-24 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-1 justify-start">
-          <Link>
+          <Link to="/">
           <img alt="Logo" src={Logo} className="h-12 w-auto cursor-pointer" />
           </Link>
         </div>

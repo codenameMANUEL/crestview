@@ -66,7 +66,7 @@ const HeroSection = () => {
       className="relative min-h-screen bg-cover bg-no-repeat bg-right"
       style={{
         backgroundImage:
-          "url('https://images.pexels.com/photos/236709/pexels-photo-236709.jpeg?auto=compress&cs=tinysrgb&w=600')",
+          "url('https://www.autodesk.com/blogs/construction/wp-content/uploads/2021/08/Blog-Hero.jpg')",
       }}
     >
       <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -84,7 +84,7 @@ const HeroSection = () => {
         </div>
 
         {/* Form Section */}
-        <div className="backdrop-filter backdrop-blur-sm bg-opacity-0 rounded-lg shadow-lg p-6 w-full max-w-md z-10 lg:ml-8 border border-gray-600">
+        <div className="backdrop-filter backdrop-blur-sm bg-opacity-0 rounded-md shadow-lg p-6 w-full max-w-md z-10 lg:ml-8 border border-gray-600">
           <h2 className="text-xl md:text-2xl font-bold mb-4 text-center lg:text-left text-white">
             Get Your Free Quote
           </h2>
