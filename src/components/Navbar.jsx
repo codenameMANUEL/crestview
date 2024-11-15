@@ -1,14 +1,6 @@
 import { useState } from "react";
-import {
-  UserRound,
-  ShoppingBag,
-  AlignLeft,
-  X,
-  Facebook,
-  Instagram,
-} from "lucide-react";
-// import LOGO from "../assets/logo.png";
-import Logo from "../../src/assets/logo.png"
+import { AlignLeft, X } from "lucide-react";
+import Logo from "../../src/assets/logo.png";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
@@ -19,9 +11,8 @@ export default function NavBar() {
   const toggleTab = () => setIsTabOpen(!isTabOpen);
   const links = ["HOME", "ABOUT", "SERVICES", "PROJECT", "CAREER", "CONTACT"];
 
-
   return (
-    <nav className="relative bg-white shadow-sm w-full">
+    <nav className="relative bg-white shadow-sm w-full font-space-grotesk">
       <div className="flex justify-between items-center h-16 px-4 sm:px-6 lg:px-8 md:hidden">
         <div className="flex justify-center">
           <img alt="Logo" src={Logo} className="h-10 w-auto" />
@@ -42,7 +33,9 @@ export default function NavBar() {
       )}
 
       <div
-        className={`fixed inset-y-0 right-0 bg-white shadow-lg transform z-50 ${isMenuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-700 ease-in-out w-3/4`}
+        className={`fixed inset-y-0 right-0 bg-white shadow-lg transform z-50 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-700 ease-in-out w-3/4`}
       >
         <div className="flex items-center justify-between p-4">
           <span className="text-lg font-semibold"></span>
@@ -54,7 +47,7 @@ export default function NavBar() {
           <ul className="space-y-7">
             {links.map((link, index) => (
               <li key={index} className="text-gray-800 hover:text-gray-600">
-                <Link to={`/${link.toLowerCase()}`}>{link}</Link>
+                <Link to={link === "HOME" ? "/" : `/${link.toLowerCase()}`}>{link}</Link>
               </li>
             ))}
           </ul>
@@ -62,11 +55,14 @@ export default function NavBar() {
       </div>
 
       <div className="hidden md:flex lg:hidden items-center justify-between h-20 px-4 sm:px-6 lg:px-8">
-      <div className="flex  justify-center">
+        <div className="flex  justify-center">
           <img alt="Logo" src={Logo} className="h-12 w-auto" />
         </div>
         <div className="flex justify-start">
-          <AlignLeft className="h-6 w-6 text-stone-800 cursor-pointer" onClick={toggleTab} />
+          <AlignLeft
+            className="h-6 w-6 text-stone-800 cursor-pointer"
+            onClick={toggleTab}
+          />
         </div>
       </div>
 
@@ -78,8 +74,9 @@ export default function NavBar() {
       )}
 
       <div
-        className={`fixed inset-y-0 left-0 bg-white shadow-lg transform z-50 ${isTabOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out w-7/12`}
+        className={`fixed inset-y-0 right-0 bg-white shadow-lg transform z-50 ${
+          isTabOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out w-7/12`}
       >
         <div className="flex items-center justify-between p-4">
           <span className="text-lg font-semibold"></span>
@@ -87,11 +84,11 @@ export default function NavBar() {
             <X className="h-6 w-6" />
           </button>
         </div>
-        <div className="p-4">
-        <ul className="space-y-4">
+        <div className="p-4 px-14">
+          <ul className="space-y-4">
             {links.map((link, index) => (
-              <li key={index} className="text-gray-800 hover:text-gray-600">
-                <Link to={`/${link.toLowerCase()}`}>{link}</Link>
+              <li key={index} className="text-gray-800 hover:text-gray-600 pt-5">
+                <Link to={link === "HOME" ? "/" : `/${link.toLowerCase()}`}>{link}</Link>
               </li>
             ))}
           </ul>
@@ -135,7 +132,7 @@ export default function NavBar() {
           <img alt="Logo" src={Logo} className="h-12 w-auto" />
         </div>
         <div className="flex flex-1 justify-center space-x-10">
-          <Link to="/home" className="text-stone-800">
+          <Link to="/" className="text-stone-800">
             HOME
           </Link>
           <Link to="/about" className="text-stone-800">

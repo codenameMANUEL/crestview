@@ -1,32 +1,31 @@
 import { MapPin } from 'lucide-react';
-import where1 from "../../src/assets/01where.webp";
-import where2 from "../../src/assets/02where.webp";
-import where3 from "../../src/assets/03where.webp";
-import where4 from "../../src/assets/04where.webp";
+import where1 from "../../src/assets/where01.jpg";
+import where2 from "../../src/assets/where02.jpg";
+import where3 from "../../src/assets/where03.jpg";
+import where4 from "../../src/assets/where04.jpg";
 
 export default function WhereWeWork() {
     const titles = [
-        "Jazzy Elite Construction Shopping",
-        "Fresh Concept Construction Renovation",
-        "Installation a Supply System",
-        "Reconstruction of Old Factory Building"
+        "Queens Place Mall",
+        "The Fulton Center",
+        "CF Chinook Centre",
+        "Dartmouth Crossing"
     ];
 
     const locations = [
-        "100 Sunrise Ct Hamel, Minnesota",
-        "Rocky Highway Port Juana",
-        "Wuckert Junctions Hermannberg",
-        "Stoltenberg Underpass Blockbury"
+        "8801 Queens Blvd, Queens, NY 11373, USA",
+        "200 Broadway, New York, NY 10038, USA",
+        "6455 Macleod Trail, Calgary, AB T2H 0K8, Canada",
+        "34 Logiealmond Close, Dartmouth, NS B3B 0C8, Canada"
     ];
 
     // Array of imported images
     const images = [where1, where2, where3, where4];
 
     return (
-        <div className="bg-navy px-4 md:px-28 py-12 md:py-24">
+        <div className="bg-navy px-4 md:px-28 py-12 md:py-24 font-space-grotesk">
             <p className="uppercase font-bold text-sm text-white">What we do</p>
             <p className="text-3xl md:text-5xl font-semibold text-white">Our <span className="text-green-600">Projects</span></p>
-
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 cursor-pointer">
                     {titles.map((title, index) => (
