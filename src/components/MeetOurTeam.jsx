@@ -3,10 +3,10 @@ import profileImage from "../assets/profileImage.png";
 export default function MeetOurTeam() {
   return (
     <> 
-      <h2 className="font-semibold text-3xl tracking-tight text-slate-900 sm:text-4xl text-center mb-10">
+      <h2 className="font-semibold text-3xl tracking-tight text-slate-900 sm:text-4xl text-center mb-10 pt-14 font-space-grotesk">
         Meet Our Team
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-4 px-20 mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-4 px-20 mb-20 font-space-grotesk">
         {/* Card 1 */}
         <div className="overflow-hidden text-center">
           <img
@@ -29,7 +29,7 @@ export default function MeetOurTeam() {
           />
           <div className="p-4">
             <p className="text-xl font-semibold text-gray-800">Bryian Thomason</p>
-            <p className="text-sm text-gray-600">Project Manager</p>
+            <p className="text-sm text-gray-600">Operations Manager</p>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export default function MeetOurTeam() {
           />
           <div className="p-4">
             <p className="text-xl font-semibold text-gray-800">Bryian Thomason</p>
-            <p className="text-sm text-gray-600">Project Manager</p>
+            <p className="text-sm text-gray-600">HR Manager</p>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export default function MeetOurTeam() {
           />
           <div className="p-4">
             <p className="text-xl font-semibold text-gray-800">Bryian Thomason</p>
-            <p className="text-sm text-gray-600">Project Manager</p>
+            <p className="text-sm text-gray-600">Site Supervisor</p>
           </div>
         </div>
       </div>
