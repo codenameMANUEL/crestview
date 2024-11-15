@@ -10,45 +10,160 @@ export default function Careers() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [cv, setCv] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission, e.g., send data to a server or display a confirmation
+    setFullName("");
+    setEmail("");
+    setCv(null);
+    setShowModal(false);
+    console.log("Full Name:", fullName);
+    console.log("Email:", email);
+    console.log("CV:", cv);
+  };
+
+  const handleFileChange = (e) => {
+    setCv(e.target.files[0]);
+  };
+
   const accordionData = [
     {
       question: "Customer Support Representative",
-      answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nulla quasi quo, enim amet pariatur. Aliquid modi reiciendis perspiciatis omnis nulla veritatis aut reprehenderit explicabo laborum provident dolor odit at, a perferendis nostrum libero culpa deserunt deleniti quasi.",
+      answer:
+        "Crestview Construction is NOW HIRING dedicated and enthusiastic Customer Service Representative to join our team. This role is essential in providing exceptional service to our clients and ensuring their needs are met efficiently. The ideal candidate will possess strong communication skills and a passion for helping others, contributing to a positive customer experience.",
+      details: {
+        whatWeOffer: [
+          "Full-time customer service career, offering the flexibility to work remotely.",
+          "$25 to $35 per hour",
+          "401(k)",
+          "Health insurance",
+          "We will provide professional training to all staff members",
+          "* We provide Work tools such as a laptop and other necessary equipment"
+          // More offers...
+        ],
+        qualitiesWeValue: [
+          "Openness to learn and be coached.",
+          "Outgoing, friendly, positive, and approachable personality.",
+          // More qualities...
+        ],
+        yourQualifications: [
+          "Basic computer literacy is essential.",
+          // More qualifications...
+        ],
+        yourJobResponsibilities: [
+          "Respond to customer inquiries via phone, email, or chat in a timely and professional manner.",
+          "Handle customer complaints with empathy and resolve issues promptly to ensure satisfaction.",
+          "Follow up with clients as needed to ensure their needs have been met and gather feedback on services provided."
+          // More responsibilities...
+        ],
+      },
     },
     {
-      question: "Virtual Entry",
-      answer: "We have strict quality control processes in place to maintain high standards in all our projects.",
+      question: "Virtual Assistant",
+      answer:
+        "We are now seeking a Virtual Assistant to join our team! From administrative and marketing tasks to inside sales and customer service - we hire only the most qualified individual for the role.",
+      details: {
+        whatWeOffer: [
+          "Full-time virtual assistant career, offering the flexibility to work remotely.",
+          "$30 to $35 per hour",
+          "401(k)",
+          "Health insurance",
+          "We will provide professional training to all staff members",
+          "* We provide Work tools such as a laptop and other necessary equipment"
+          // More offers...
+        ],
+        qualitiesWeValue: [
+          "Openness to learn and be coached.",
+          "Outgoing, friendly, positive, and approachable personality.",
+          // More qualities...
+        ],
+        yourQualifications: [
+          "Basic computer literacy is essential.",
+          // More qualifications...
+        ],
+        yourJobResponsibilities: [
+          "Ability to build rapport with clients",
+          "Document and update customer records based on interactions",
+          "Positive and professional demeanor"
+          // More responsibilities...
+        ],
+      },
     },
     {
-      question: "Data Entry",
-      answer: "We offer a wide range of construction services, including residential, commercial, and industrial projects.",
+      question: "Data Entry Specialist",
+      answer:
+        "We are now seeking a Virtual Assistant to join our team! From administrative and marketing tasks to inside sales and customer service - we hire only the most qualified individual for the role.",
+      details: {
+        whatWeOffer: [
+          "Full-time virtual assistant career, offering the flexibility to work remotely.",
+          "$22.75 to $32.25 per hour ",
+          "401(k)",
+          "Health insurance",
+          "We will provide professional training to all staff members",
+          "* We provide Work tools such as a laptop and other necessary equipment"
+          // More offers...
+        ],
+        qualitiesWeValue: [
+          "Openness to learn and be coached.",
+          "Outgoing, friendly, positive, and approachable personality.",
+          // More qualities...
+        ],
+        yourQualifications: [
+          "Basic computer literacy is essential.",
+          // More qualifications...
+        ],
+        yourJobResponsibilities: [
+          "Accurately entering data into company databases and systems",
+          "Maintaining and updating existing data",
+          "Organizing and maintaining digital and paper files",
+          "Ensuring data security and confidentiality",
+          " Performing regular backups to ensure data preservation "
+          // More responsibilities...
+        ],
+      },
     },
-    {
-      question: "Marketing",
-      answer: "We offer a wide range of construction services, including residential, commercial, and industrial projects.",
-    },
+
+    // Add details for the other job entries as needed
   ];
+  
 
   return (
     <>
       <NavBar />
-      <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 font-space-grotesk">
         <div className="mx-auto max-w-screen-xl text-start">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Join Our Team
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            At <span className="font-bold text-indigo-600">Crestview Construction</span>, we're passionate about building a brighter future together. As a growing leader in the{" "}
-            <span className="italic">Construction</span> industry, we’re always on the lookout for talented individuals who are eager to make an impact. Whether you're a seasoned professional or just starting your career, we offer opportunities for growth, development, and collaboration.
+          <p className="mt-4 text-lg ">
+            At{" "}
+            <span className="font-bold text-indigo-600">
+              Crestview Construction
+            </span>
+            , we're passionate about building a brighter future together. As a
+            growing leader in the <span className="italic">Construction</span>{" "}
+            industry, we’re always on the lookout for talented individuals who
+            are eager to make an impact. Whether you're a seasoned professional
+            or just starting your career, we offer opportunities for growth,
+            development, and collaboration.
           </p>
-          <p className="mt-4 text-lg text-gray-600">
-            We believe in creating a supportive and inclusive environment where innovation thrives and each team member can contribute to our shared vision. With a strong commitment to excellence, teamwork, and continuous improvement, we’re dedicated to fostering a culture of respect, creativity, and passion.
+          <p className="mt-4 text-lg">
+            We believe in creating a supportive and inclusive environment where
+            innovation thrives and each team member can contribute to our shared
+            vision. With a strong commitment to excellence, teamwork, and
+            continuous improvement, we’re dedicated to fostering a culture of
+            respect, creativity, and passion.
           </p>
-          <p className="mt-4 text-lg text-gray-600">
-            Explore our open positions below and find out how you can become part of our dynamic team. Together, we can achieve great things.
+          <p className="mt-4 text-lg">
+            Explore our open positions below and find out how you can become
+            part of our dynamic team. Together, we can achieve great things.
           </p>
         </div>
-        <div className="sm:px-6 lg:px-16 pt-16">
+        <div className="sm:px-6 pt-16">
           {accordionData.map((item, index) => (
             <div key={index} className="mt-5 border-b">
               <button
@@ -57,9 +172,72 @@ export default function Careers() {
               >
                 <span className="text-xl sm:text-2xl">{item.question}</span>
               </button>
-              <div className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-full' : 'h-0'}`}>
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? "max-h-full" : "h-0"
+                }`}
+              >
                 <div className="p-4 border-gray-200">
                   <p className="text-gray-600">{item.answer}</p>
+
+                  {item.details && (
+                    <>
+                      <div className="mt-5">
+                        <h3 className="text-lg font-bold">What We Offer:</h3>
+                        <ul className="list-disc pl-5">
+                          {item.details.whatWeOffer.map((offer, idx) => (
+                            <li key={idx} className="text-gray-600">
+                              {offer}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="mt-5">
+                        <h3 className="text-lg font-bold">
+                          Qualities We Value:
+                        </h3>
+                        <ul className="list-disc pl-5">
+                          {item.details.qualitiesWeValue.map((quality, idx) => (
+                            <li key={idx} className="text-gray-600">
+                              {quality}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="mt-5">
+                        <h3 className="text-lg font-bold">
+                          Your Qualifications:
+                        </h3>
+                        <ul className="list-disc pl-5">
+                          {item.details.yourQualifications.map(
+                            (qualification, idx) => (
+                              <li key={idx} className="text-gray-600">
+                                {qualification}
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+
+                      <div className="mt-5">
+                        <h3 className="text-lg font-bold">
+                          Your Job Responsibilities:
+                        </h3>
+                        <ul className="list-disc pl-5">
+                          {item.details.yourJobResponsibilities.map(
+                            (responsibility, idx) => (
+                              <li key={idx} className="text-gray-600">
+                                {responsibility}
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    </>
+                  )}
+
                   <button
                     className="bg-yellow-400 active:bg-yellow-600 font-bold uppercase text-sm sm:text-base px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 mt-5"
                     type="button"
@@ -75,26 +253,82 @@ export default function Careers() {
       </section>
 
       {/* Modal */}
+      {/* Modal */}
       {showModal && (
-        <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+        <form
+          onSubmit={handleSubmit} // Add the onSubmit handler
+          className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+        >
           <div className="relative w-auto my-6 mx-auto max-w-xl sm:max-w-2xl">
             {/* Content */}
             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               {/* Header */}
               <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                <h3 className="text-2xl sm:text-3xl font-semibold">Apply for a Position</h3>
+                <h3 className="text-2xl sm:text-3xl font-semibold">
+                  Apply for a Position
+                </h3>
                 <button
                   className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                   onClick={() => setShowModal(false)} // Close modal on "×"
                 >
-                  <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none cursor-pointer">×</span>
+                  <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none cursor-pointer">
+                    ×
+                  </span>
                 </button>
               </div>
               {/* Body */}
               <div className="relative p-6 flex-auto">
-                <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                  Thank you for your interest in joining our team! Please fill out the application form and upload your resume. We look forward to hearing from you.
-                </p>
+                <div>
+                  <label
+                    htmlFor="fullName"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    required
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="cv"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Upload CV
+                  </label>
+                  <input
+                    type="file"
+                    id="cv"
+                    name="cv"
+                    onChange={handleFileChange}
+                    required
+                    className="mt-1 block w-full text-sm text-gray-700 border border-gray-300 rounded-md"
+                  />
+                </div>
               </div>
               {/* Footer */}
               <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
@@ -107,21 +341,18 @@ export default function Careers() {
                 </button>
                 <button
                   className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 cursor-pointer"
-                  type="button"
-                  onClick={() => setShowModal(false)} // Close modal on "Submit" (you can change this later to submit the form)
+                  type="submit" // Now it triggers handleSubmit
+                  onSubmit={(e) => {}}
                 >
                   Submit Application
                 </button>
               </div>
             </div>
           </div>
-          {/* Overlay */}
-          {/* <div className="opacity-25 fixed inset-0 z-40 bg-black"></div> */}
-        </div>
+        </form>
       )}
 
       <Footer />
     </>
   );
-
 }
