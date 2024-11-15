@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const HeroSection = () => {
@@ -8,7 +9,7 @@ const HeroSection = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+  const [submitStatus, setSubmitStatus] = useState({ type: "", message: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,31 +18,31 @@ const HeroSection = () => {
       [name]: value,
     });
     // Clear status when user starts typing again
-    setSubmitStatus({ type: '', message: '' });
+    setSubmitStatus({ type: "", message: "" });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setSubmitStatus({ type: '', message: '' });
+    setSubmitStatus({ type: "", message: "" });
 
     try {
-      const response = await fetch('YOUR_API_ENDPOINT', {
-        method: 'POST',
+      const response = await fetch("YOUR_API_ENDPOINT", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error('Submission failed');
+        throw new Error("Submission failed");
       }
 
       const data = await response.json();
       setSubmitStatus({
-        type: 'success',
-        message: 'Thank you! We will get back to you soon.'
+        type: "success",
+        message: "Thank you! We will get back to you soon.",
       });
 
       // Clear form after successful submission
@@ -50,11 +51,10 @@ const HeroSection = () => {
         email: "",
         projectDetails: "",
       });
-
     } catch (error) {
       setSubmitStatus({
-        type: 'error',
-        message: 'Something went wrong. Please try again.'
+        type: "error",
+        message: "Something went wrong. Please try again.",
       });
     } finally {
       setLoading(false);
@@ -76,9 +76,11 @@ const HeroSection = () => {
           <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-text-100 uppercase">
             Build space for future dream
           </h1>
-          <button className="bg-yellow-400 py-3 px-10 rounded-none hover:bg-yellow-300 hover:text-black text-sm font-semibold mt-5">
-            OUR TEAM
-          </button>
+          <Link to="/about">
+            <button className="bg-yellow-400 py-3 px-10 rounded-none hover:bg-yellow-300 hover:text-black text-sm font-semibold mt-5">
+              OUR TEAM
+            </button>
+          </Link>
         </div>
 
         {/* Form Section */}
@@ -89,10 +91,15 @@ const HeroSection = () => {
 
           {/* Status Messages */}
           {submitStatus.message && (
-            <div className={`mb-4 p-3 rounded ${
-              submitStatus.type === 'success' ? 'bg-green-100 text-green-700 border-green-200' :
-              submitStatus.type === 'error' ? 'bg-red-100 text-red-700 border-red-200' : ''
-            }`}>
+            <div
+              className={`mb-4 p-3 rounded ${
+                submitStatus.type === "success"
+                  ? "bg-green-100 text-green-700 border-green-200"
+                  : submitStatus.type === "error"
+                  ? "bg-red-100 text-red-700 border-red-200"
+                  : ""
+              }`}
+            >
               {submitStatus.message}
             </div>
           )}
@@ -146,11 +153,11 @@ const HeroSection = () => {
             <button
               type="submit"
               className={`w-full py-2 bg-yellow-400 text-white font-bold rounded-lg hover:bg-yellow-300 hover:text-black transition duration-300 ${
-                loading ? 'opacity-50 cursor-not-allowed' : ''
+                loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={loading}
             >
-              {loading ? 'Sending...' : 'Get Quote'}
+              {loading ? "Sending..." : "Get Quote"}
             </button>
           </form>
         </div>
