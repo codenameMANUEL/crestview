@@ -9,7 +9,7 @@ export default function NavBar() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleTab = () => setIsTabOpen(!isTabOpen);
-  const links = ["HOME", "ABOUT", "SERVICES", "PROJECT", "CAREER", "CONTACT"];
+  const links = ["HOME", "ABOUT", "SERVICE", "PROJECT", "CAREER", "CONTACT"];
 
   return (
     <nav className="relative bg-white shadow-sm w-full font-space-grotesk">
