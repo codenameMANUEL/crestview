@@ -1,5 +1,6 @@
 import profileImage from "../assets/profileImage.png";
 import hr from "../assets/hr.png"
+import projectManger from "../assets/projectManger.png"
 
 export default function MeetOurTeam() {
   return (
@@ -11,12 +12,12 @@ export default function MeetOurTeam() {
         {/* Card 1 */}
         <div className="overflow-hidden text-center">
           <img
-            src={profileImage}
+            src={projectManger}
             className="grayscale brightness-90 contrast-100 w-full h-52 object-cover object-center"
             alt="Profile"
           />
           <div className="p-4">
-            <p className="text-xl font-semibold text-gray-800">Bryian Thomason</p>
+            <p className="text-xl font-semibold text-gray-800">James Marcotte</p>
             <p className="text-sm text-gray-600">Project Manager</p>
           </div>
         </div>
