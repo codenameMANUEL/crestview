@@ -30,8 +30,6 @@ export default function Careers() {
     setCv(e.target.files[0]);
   };
 
-  const sendMail = require("@sendgrid/mail")
-
   const accordionData = [
     {
       question: "Customer Support Representative",
