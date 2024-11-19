@@ -26,6 +26,11 @@ export default function Contact() {
   return (
     <>
         <NavBar/>
+        <div className="px-4 md:px-28 py-12 md:py-14 bg-navy font-space-grotesk">
+        <p className="text-lg md:text-2xl text-white uppercase">
+          <span className="text-md">CONTACT</span>
+        </p>
+      </div>
         <div className="bg-gray-50 dark:bg-gray-900 font-space-grotesk" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
         <h2 className="text-4xl font-bold dark:text-gray-100 uppercase">Contact</h2>

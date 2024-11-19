@@ -39,7 +39,7 @@ export default function MeetOurTeam() {
         <div className="overflow-hidden text-center">
           <img
             src={hr}
-            className="grayscale brightness-90 contrast-100 w-full h-52 object-cover object-center"
+            className="grayscale brightness-90 contrast-100 w-full h-52 object-cover object-top "
             alt="Profile"
           />
           <div className="p-4">

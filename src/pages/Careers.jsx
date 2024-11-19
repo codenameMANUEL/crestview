@@ -166,6 +166,11 @@ export default function Careers() {
   return (
     <>
       <NavBar />
+      <div className="px-4 md:px-28 py-12 md:py-14 bg-navy font-space-grotesk">
+        <p className="text-lg md:text-2xl text-white uppercase">
+          <span className="text-md">CAREER</span>
+        </p>
+      </div>
       <section className="py-16 px-4 sm:px-6 lg:px-8 font-space-grotesk">
         <div className="mx-auto max-w-screen-xl text-start">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -195,6 +200,9 @@ export default function Careers() {
             part of our dynamic team. Together, we can achieve great things.
           </p>
         </div>
+        <h1 className="mt-4 text-2xl uppercase font-extrabold">
+          Open Roles
+          </h1>
         <div className="sm:px-6 pt-16">
           {accordionData.map((item, index) => (
             <div key={index} className="mt-5 border-b">

@@ -15,7 +15,7 @@ export default function About() {
       <NavBar />
       <div className="px-4 md:px-28 py-12 md:py-14 bg-navy font-space-grotesk">
         <p className="text-lg md:text-2xl text-white uppercase">
-          Home - <span className="text-sm pl-6">About</span>
+          <span className="text-md">ABOUT</span>
         </p>
       </div>
       <div className="container mx-auto px-4 md:px-16 font-space-grotesk">
